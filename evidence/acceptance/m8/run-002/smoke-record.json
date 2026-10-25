@@ -1,0 +1,33 @@
+{
+  "recorded_at_utc": "2026-10-25T15:32:26.782203+00:00",
+  "execution": "latest local Docker Compose API image",
+  "source_fingerprint_sha256": {
+    "app/main.py": "9a6d633919c2f14322a6ce97888493a51b284d256250a0315aba7d05be823e64",
+    "app/pipeline.py": "735684253c7ef4dddfe9e95f0ae3d76bf0a4870c2fbc791d17f004f577985e4b",
+    "app/audio.py": "40504a42d46d024a6bb1a09d43455aaf3cec928f9e4df28faa5f9c8df8e51ac8",
+    "compose.yaml": "4d339b37796eafc30facc000229a955621252894e65d35a8ac8522ccbca292da"
+  },
+  "docker_image_id": "sha256:f1282501a844f9b60641e05141a1595d0f5983d1876576a3e47b32b6a72fbbad",
+  "host_port": 18000,
+  "health_status": {
+    "status": "ok",
+    "service": "incubrix-ps3"
+  },
+  "readiness_status": {
+    "status": "ready"
+  },
+  "job_status": "succeeded",
+  "job_id": "700ad964-bee5-487b-b35f-c38b5dd760eb",
+  "files_downloaded": [
+    "captions.srt",
+    "manifest.json",
+    "timeline.json",
+    "video-qa.json",
+    "video_16_9.mp4"
+  ],
+  "video_qa_status": "passed",
+  "manifest_video_quality_status": "passed",
+  "limitations": [
+    "Local container only; no public deployment or review-period uptime verified."
+  ]
+}

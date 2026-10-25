@@ -1,0 +1,8 @@
+1
+00:00:00,000 --> 00:00:02,470
+Solar panels turn daylight into electricity.
+
+2
+00:00:02,470 --> 00:00:05,554
+A home battery stores that clean power for evening use.
+

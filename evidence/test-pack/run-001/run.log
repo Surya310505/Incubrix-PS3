@@ -1,0 +1,15 @@
+{
+  "job_id": "817aae92-6f5e-4ce2-a969-f2ffd1991cc7",
+  "status": "succeeded",
+  "progress": 100,
+  "result": {
+    "status": "succeeded",
+    "files": {
+      "video_16_9.mp4": "/api/v1/jobs/817aae92-6f5e-4ce2-a969-f2ffd1991cc7/files/video_16_9.mp4",
+      "timeline.json": "/api/v1/jobs/817aae92-6f5e-4ce2-a969-f2ffd1991cc7/files/timeline.json",
+      "captions.srt": "/api/v1/jobs/817aae92-6f5e-4ce2-a969-f2ffd1991cc7/files/captions.srt",
+      "manifest.json": "/api/v1/jobs/817aae92-6f5e-4ce2-a969-f2ffd1991cc7/files/manifest.json"
+    },
+    "duration_seconds": 3.233
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "script": "Every day, sunlight delivers more energy to Earth than we use in a year. Solar panels capture that light and photovoltaic cells convert it into direct current electricity. An inverter changes the current into power that household appliances can use. A family can generate clean electricity on the roof of an ordinary home. When the sun sets, a home battery stores extra daytime power for evening demand. Connected homes can send surplus electricity back to the local grid. At utility scale, broad solar farms turn open land into productive clean energy fields. Wind turbines and healthy landscapes complement solar power and help lower carbon emissions. With thoughtful planning, renewable energy makes communities more resilient and the future brighter.",
+  "aspect_ratios": [
+    "16:9"
+  ],
+  "style": "illustrated clean-energy graphics",
+  "avoid": [],
+  "captions": {
+    "burn_in": true,
+    "srt": true
+  }
+}

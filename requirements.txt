@@ -1,0 +1,10 @@
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30,<1.0
+pydantic>=2.7,<3.0
+python-multipart>=0.0.9
+Pillow>=10.0,<13.0
+faster-whisper>=1.1.0,<2.0
+av>=11,<19
+pytest>=8.0
+httpx>=0.27
+boto3>=1.35,<2.0

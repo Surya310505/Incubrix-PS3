@@ -1,0 +1,11 @@
+{
+  "script": "Saving money starts with a plan. Track every expense.",
+  "voice": "en-IN-female",
+  "aspect_ratios": ["16:9"],
+  "style": "simple abstract motion graphics",
+  "avoid": [],
+  "captions": {
+    "burn_in": true,
+    "srt": true
+  }
+}

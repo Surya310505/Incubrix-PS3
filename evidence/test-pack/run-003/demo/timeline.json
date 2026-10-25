@@ -1,0 +1,213 @@
+{
+  "job_id": "7d75491d-4729-4aa9-8905-55fb5c0320a9",
+  "timing_source": "measured duration of separately synthesized narration segments",
+  "scenes": [
+    {
+      "scene_id": 1,
+      "narration_text": "Every day, sunlight delivers more energy to Earth than we use in a year.",
+      "start": 0.0,
+      "end": 4.011,
+      "clip": "generated-scene-1",
+      "source": {
+        "type": "procedural-offline-visual",
+        "asset_id": "generated-scene-1",
+        "url": null,
+        "licence": "not applicable; generated graphic, not stock footage",
+        "licence_reference": null,
+        "creator": null,
+        "attribution": null,
+        "licence_evidence": "Original graphic rendered locally; this is not evidence of commercial B-roll rights."
+      },
+      "is_ai_generated": false,
+      "is_procedurally_generated": true,
+      "selection_reason": "Original locally generated solar panels illustration; not stock footage.",
+      "relevance_score": null,
+      "title_keyword_overlap": null,
+      "visual_hint": null
+    },
+    {
+      "scene_id": 2,
+      "narration_text": "Solar panels capture that light and photovoltaic cells convert it into direct current electricity.",
+      "start": 4.011,
+      "end": 9.499,
+      "clip": "generated-scene-2",
+      "source": {
+        "type": "procedural-offline-visual",
+        "asset_id": "generated-scene-2",
+        "url": null,
+        "licence": "not applicable; generated graphic, not stock footage",
+        "licence_reference": null,
+        "creator": null,
+        "attribution": null,
+        "licence_evidence": "Original graphic rendered locally; this is not evidence of commercial B-roll rights."
+      },
+      "is_ai_generated": false,
+      "is_procedurally_generated": true,
+      "selection_reason": "Original locally generated solar panels illustration; not stock footage.",
+      "relevance_score": null,
+      "title_keyword_overlap": null,
+      "visual_hint": null
+    },
+    {
+      "scene_id": 3,
+      "narration_text": "An inverter changes the current into power that household appliances can use.",
+      "start": 9.499,
+      "end": 13.77,
+      "clip": "generated-scene-3",
+      "source": {
+        "type": "procedural-offline-visual",
+        "asset_id": "generated-scene-3",
+        "url": null,
+        "licence": "not applicable; generated graphic, not stock footage",
+        "licence_reference": null,
+        "creator": null,
+        "attribution": null,
+        "licence_evidence": "Original graphic rendered locally; this is not evidence of commercial B-roll rights."
+      },
+      "is_ai_generated": false,
+      "is_procedurally_generated": true,
+      "selection_reason": "Original locally generated solar home illustration; not stock footage.",
+      "relevance_score": null,
+      "title_keyword_overlap": null,
+      "visual_hint": null
+    },
+    {
+      "scene_id": 4,
+      "narration_text": "A family can generate clean electricity on the roof of an ordinary home.",
+      "start": 13.77,
+      "end": 17.861,
+      "clip": "generated-scene-4",
+      "source": {
+        "type": "procedural-offline-visual",
+        "asset_id": "generated-scene-4",
+        "url": null,
+        "licence": "not applicable; generated graphic, not stock footage",
+        "licence_reference": null,
+        "creator": null,
+        "attribution": null,
+        "licence_evidence": "Original graphic rendered locally; this is not evidence of commercial B-roll rights."
+      },
+      "is_ai_generated": false,
+      "is_procedurally_generated": true,
+      "selection_reason": "Original locally generated solar home illustration; not stock footage.",
+      "relevance_score": null,
+      "title_keyword_overlap": null,
+      "visual_hint": null
+    },
+    {
+      "scene_id": 5,
+      "narration_text": "When the sun sets, a home battery stores extra daytime power for evening demand.",
+      "start": 17.861,
+      "end": 22.244,
+      "clip": "generated-scene-5",
+      "source": {
+        "type": "procedural-offline-visual",
+        "asset_id": "generated-scene-5",
+        "url": null,
+        "licence": "not applicable; generated graphic, not stock footage",
+        "licence_reference": null,
+        "creator": null,
+        "attribution": null,
+        "licence_evidence": "Original graphic rendered locally; this is not evidence of commercial B-roll rights."
+      },
+      "is_ai_generated": false,
+      "is_procedurally_generated": true,
+      "selection_reason": "Original locally generated solar home illustration; not stock footage.",
+      "relevance_score": null,
+      "title_keyword_overlap": null,
+      "visual_hint": null
+    },
+    {
+      "scene_id": 6,
+      "narration_text": "Connected homes can send surplus electricity back to the local grid.",
+      "start": 22.244,
+      "end": 25.887,
+      "clip": "generated-scene-6",
+      "source": {
+        "type": "procedural-offline-visual",
+        "asset_id": "generated-scene-6",
+        "url": null,
+        "licence": "not applicable; generated graphic, not stock footage",
+        "licence_reference": null,
+        "creator": null,
+        "attribution": null,
+        "licence_evidence": "Original graphic rendered locally; this is not evidence of commercial B-roll rights."
+      },
+      "is_ai_generated": false,
+      "is_procedurally_generated": true,
+      "selection_reason": "Original locally generated solar home illustration; not stock footage.",
+      "relevance_score": null,
+      "title_keyword_overlap": null,
+      "visual_hint": null
+    },
+    {
+      "scene_id": 7,
+      "narration_text": "At utility scale, broad solar farms turn open land into productive clean energy fields.",
+      "start": 25.887,
+      "end": 31.461,
+      "clip": "generated-scene-7",
+      "source": {
+        "type": "procedural-offline-visual",
+        "asset_id": "generated-scene-7",
+        "url": null,
+        "licence": "not applicable; generated graphic, not stock footage",
+        "licence_reference": null,
+        "creator": null,
+        "attribution": null,
+        "licence_evidence": "Original graphic rendered locally; this is not evidence of commercial B-roll rights."
+      },
+      "is_ai_generated": false,
+      "is_procedurally_generated": true,
+      "selection_reason": "Original locally generated solar landscape illustration; not stock footage.",
+      "relevance_score": null,
+      "title_keyword_overlap": null,
+      "visual_hint": null
+    },
+    {
+      "scene_id": 8,
+      "narration_text": "Wind turbines and healthy landscapes complement solar power and help lower carbon emissions.",
+      "start": 31.461,
+      "end": 36.693,
+      "clip": "generated-scene-8",
+      "source": {
+        "type": "procedural-offline-visual",
+        "asset_id": "generated-scene-8",
+        "url": null,
+        "licence": "not applicable; generated graphic, not stock footage",
+        "licence_reference": null,
+        "creator": null,
+        "attribution": null,
+        "licence_evidence": "Original graphic rendered locally; this is not evidence of commercial B-roll rights."
+      },
+      "is_ai_generated": false,
+      "is_procedurally_generated": true,
+      "selection_reason": "Original locally generated solar landscape illustration; not stock footage.",
+      "relevance_score": null,
+      "title_keyword_overlap": null,
+      "visual_hint": null
+    },
+    {
+      "scene_id": 9,
+      "narration_text": "With thoughtful planning, renewable energy makes communities more resilient and the future brighter.",
+      "start": 36.693,
+      "end": 41.794,
+      "clip": "generated-scene-9",
+      "source": {
+        "type": "procedural-offline-visual",
+        "asset_id": "generated-scene-9",
+        "url": null,
+        "licence": "not applicable; generated graphic, not stock footage",
+        "licence_reference": null,
+        "creator": null,
+        "attribution": null,
+        "licence_evidence": "Original graphic rendered locally; this is not evidence of commercial B-roll rights."
+      },
+      "is_ai_generated": false,
+      "is_procedurally_generated": true,
+      "selection_reason": "Original locally generated solar landscape illustration; not stock footage.",
+      "relevance_score": null,
+      "title_keyword_overlap": null,
+      "visual_hint": null
+    }
+  ]
+}

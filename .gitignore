@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.DS_Store
+.env
+data/
+outputs/
+*.py[cod]
+*.mp4
+*.wav
+*.mp3
+.DS_Store
+!evidence/test-pack/run-001/artifacts/*.mp4
+!evidence/test-pack/run-002/demo/*.mp4

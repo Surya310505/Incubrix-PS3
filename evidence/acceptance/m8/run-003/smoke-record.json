@@ -1,0 +1,21 @@
+{
+  "api_base": "http://127.0.0.1:18000",
+  "health": {
+    "status": "ok",
+    "service": "incubrix-ps3"
+  },
+  "readiness": {
+    "status": "ready"
+  },
+  "job_id": "add4168d-3a8d-41e7-8a1c-23b5b5a4a6fe",
+  "status": "succeeded",
+  "files_downloaded": [
+    "captions.srt",
+    "manifest.json",
+    "timeline.json",
+    "video-qa.json",
+    "video_16_9.mp4"
+  ],
+  "video_qa_status": "passed",
+  "storage_mode": "filesystem (S3 endpoint unset)"
+}

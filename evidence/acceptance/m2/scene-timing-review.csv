@@ -1,0 +1,3 @@
+input_id,scene_id,start_seconds,end_seconds,narration,coverage_observation,human_semantic_review
+m4-local-evidence,1,0.000,2.470,"Solar panels turn daylight into electricity.",Start at 0; contiguous with scene 2,Not performed
+m4-local-evidence,2,2.470,5.554,"A home battery stores that clean power for evening use.",Contiguous; ends at narration duration,Not performed

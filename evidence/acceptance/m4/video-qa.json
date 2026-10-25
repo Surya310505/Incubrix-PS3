@@ -1,0 +1,85 @@
+{
+  "checks": {
+    "black_frames": {
+      "threshold_seconds": 0.1,
+      "result": "passed"
+    },
+    "frozen_frames": {
+      "threshold_seconds": 1.0,
+      "result": "passed"
+    },
+    "audio_video_sync_tolerance_seconds": 0.15
+  },
+  "outputs": {
+    "video_16_9.mp4": {
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "video": {
+        "codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "frame_rate": "30/1",
+        "pixel_format": "yuv420p",
+        "time_base": "1/15360",
+        "start_time_seconds": 0.0,
+        "duration_seconds": 5.533333
+      },
+      "audio": {
+        "codec": "aac",
+        "sample_rate": "48000",
+        "start_time_seconds": 0.0,
+        "duration_seconds": 5.554
+      },
+      "audio_video_start_drift_seconds": 0.0,
+      "audio_video_duration_drift_seconds": 0.020667000000000435,
+      "black_intervals": [],
+      "frozen_intervals": []
+    },
+    "video_9_16.mp4": {
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "video": {
+        "codec": "h264",
+        "width": 1080,
+        "height": 1920,
+        "frame_rate": "30/1",
+        "pixel_format": "yuv420p",
+        "time_base": "1/15360",
+        "start_time_seconds": 0.0,
+        "duration_seconds": 5.533333
+      },
+      "audio": {
+        "codec": "aac",
+        "sample_rate": "48000",
+        "start_time_seconds": 0.0,
+        "duration_seconds": 5.554
+      },
+      "audio_video_start_drift_seconds": 0.0,
+      "audio_video_duration_drift_seconds": 0.020667000000000435,
+      "black_intervals": [],
+      "frozen_intervals": []
+    },
+    "video_1_1.mp4": {
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "video": {
+        "codec": "h264",
+        "width": 1080,
+        "height": 1080,
+        "frame_rate": "30/1",
+        "pixel_format": "yuv420p",
+        "time_base": "1/15360",
+        "start_time_seconds": 0.0,
+        "duration_seconds": 5.533333
+      },
+      "audio": {
+        "codec": "aac",
+        "sample_rate": "48000",
+        "start_time_seconds": 0.0,
+        "duration_seconds": 5.554
+      },
+      "audio_video_start_drift_seconds": 0.0,
+      "audio_video_duration_drift_seconds": 0.020667000000000435,
+      "black_intervals": [],
+      "frozen_intervals": []
+    }
+  },
+  "status": "passed"
+}

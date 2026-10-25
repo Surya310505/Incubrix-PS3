@@ -1,0 +1,7 @@
+case,format_or_mode,implementation_test,result,limitation
+Text TTS,script,tests/integration/test_pipeline.py::test_script_job_produces_valid_video_and_required_metadata,PASSED,Local macOS say; synthetic assessment script
+Audio validation MP3,MP3,tests/integration/test_pipeline.py::test_audio_validation_accepts_supported_formats_and_rejects_bad_inputs,PASSED,Synthetic tone; validation only
+Audio validation WAV,WAV,tests/integration/test_pipeline.py::test_audio_validation_accepts_supported_formats_and_rejects_bad_inputs,PASSED,Synthetic tone; validation only
+Audio validation M4A,M4A,tests/integration/test_pipeline.py::test_audio_validation_accepts_supported_formats_and_rejects_bad_inputs,PASSED,Synthetic tone; validation only
+Audio upload E2E,WAV,tests/e2e/test_jobs.py::test_audio_upload_preserves_voiceover_and_whisper_caption_timing,PASSED,ASR is mocked unless RUN_WHISPER_INTEGRATION=true
+Real local ASR,synthetic speech,tests/integration/test_audio.py::test_real_faster_whisper_transcribes_local_speech,SKIPPED,Opt-in model test not run in latest verification

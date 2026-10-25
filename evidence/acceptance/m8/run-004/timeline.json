@@ -1,0 +1,29 @@
+{
+  "job_id": "4047ba7f-60d3-418f-b8e0-9613e0293405",
+  "timing_source": "measured duration of separately synthesized narration segments",
+  "scenes": [
+    {
+      "scene_id": 1,
+      "narration_text": "A clear plan turns small steps into lasting progress.",
+      "start": 0.0,
+      "end": 3.333,
+      "clip": "generated-scene-1",
+      "source": {
+        "type": "procedural-offline-visual",
+        "asset_id": "generated-scene-1",
+        "url": null,
+        "licence": "not applicable; generated graphic, not stock footage",
+        "licence_reference": null,
+        "creator": null,
+        "attribution": null,
+        "licence_evidence": "Original graphic rendered locally; this is not evidence of commercial B-roll rights."
+      },
+      "is_ai_generated": false,
+      "is_procedurally_generated": true,
+      "selection_reason": "Original locally generated story illustration; not stock footage.",
+      "relevance_score": null,
+      "title_keyword_overlap": null,
+      "visual_hint": null
+    }
+  ]
+}

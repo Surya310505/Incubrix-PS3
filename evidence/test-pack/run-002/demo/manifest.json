@@ -1,0 +1,52 @@
+{
+  "job_id": "d8bfc5bf-3fa7-4733-a40c-12e0e07750c7",
+  "models": [],
+  "providers": [
+    {
+      "name": "macOS-say",
+      "version": "system-managed; exact version not queried",
+      "voice": "platform-default"
+    },
+    {
+      "name": "FFmpeg",
+      "version": "ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers"
+    },
+    {
+      "name": "FFprobe",
+      "version": "ffprobe version 8.1 Copyright (c) 2007-2026 the FFmpeg developers"
+    },
+    {
+      "name": "Pillow",
+      "version": "12.3.0"
+    }
+  ],
+  "settings": {
+    "voice": "en-IN-female",
+    "aspect_ratios": [
+      "16:9"
+    ],
+    "style": "abstract motion graphics",
+    "avoid": [],
+    "captions": {
+      "burn_in": true,
+      "srt": true
+    }
+  },
+  "seed": null,
+  "timings_ms": {
+    "total": 3871.47
+  },
+  "cost_estimate": {
+    "amount": null,
+    "currency": "USD",
+    "basis": "local compute cost not measured; no external services invoked"
+  },
+  "warnings": [
+    "Generated abstract motion graphics are used; this is not sourced B-roll footage.",
+    "Semantic relevance scoring and avoid-list filtering are not implemented.",
+    "The request voice field is metadata; select the local speech voice with environment configuration."
+  ],
+  "licence_rights": {
+    "status": "no third-party media used; generated visuals only"
+  }
+}

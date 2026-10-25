@@ -1,0 +1,390 @@
+openapi: 3.1.0
+info:
+  title: IncuBrix Script and Voiceover to B-roll Engine
+  version: 0.1.0
+  description: |
+    Background-job API. The default offline renderer supports script, scene-list,
+    and allowlisted audio URL inputs. An opt-in Pexels footage provider is
+    available only after product-specific API permission is confirmed. Footage
+    matching uses a title-keyword heuristic, not semantic relevance scoring or
+    visual safety moderation.
+servers:
+  - url: http://localhost:8000
+paths:
+  /health:
+    get:
+      operationId: health
+      responses:
+        "200":
+          description: Process health
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Health"
+  /ready:
+    get:
+      operationId: readiness
+      responses:
+        "200":
+          description: Database is reachable
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    const: ready
+        "503":
+          $ref: "#/components/responses/Error"
+  /api/v1/health:
+    get:
+      operationId: apiHealthAlias
+      responses:
+        "200":
+          description: Process health
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Health"
+  /api/v1/ready:
+    get:
+      operationId: apiReadinessAlias
+      responses:
+        "200":
+          description: Database is reachable
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    const: ready
+        "503":
+          $ref: "#/components/responses/Error"
+  /api/v1/docs:
+    get:
+      operationId: swaggerUi
+      responses:
+        "200":
+          description: Swagger UI
+          content:
+            text/html:
+              schema:
+                type: string
+    head:
+      operationId: swaggerUiHead
+      responses:
+        "200":
+          description: Swagger UI headers
+  /api/v1/docs/oauth2-redirect:
+    get:
+      operationId: swaggerOAuth2Redirect
+      responses:
+        "200":
+          description: Swagger OAuth redirect helper
+          content:
+            text/html:
+              schema:
+                type: string
+    head:
+      operationId: swaggerOAuth2RedirectHead
+      responses:
+        "200":
+          description: Swagger OAuth redirect helper headers
+  /api/v1/openapi.json:
+    get:
+      operationId: generatedOpenApiDocument
+      responses:
+        "200":
+          description: Generated OpenAPI document
+          content:
+            application/json:
+              schema:
+                type: object
+    head:
+      operationId: generatedOpenApiDocumentHead
+      responses:
+        "200":
+          description: OpenAPI document headers
+  /api/v1/broll/jobs:
+    post:
+      operationId: createBrollJob
+      description: Queues a background script, scene-list, or audio-URL rendering job.
+      parameters:
+        - in: header
+          name: Idempotency-Key
+          required: true
+          schema:
+            type: string
+            minLength: 1
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/JobRequest"
+      responses:
+        "202":
+          description: Job queued or replayed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/JobAccepted"
+        "400":
+          $ref: "#/components/responses/Error"
+        "409":
+          $ref: "#/components/responses/Error"
+        "422":
+          $ref: "#/components/responses/Error"
+  /api/v1/broll/jobs/audio:
+    post:
+      operationId: uploadAudioJob
+      description: Queues a local Whisper transcription and rendering job for an MP3, WAV, or M4A upload.
+      parameters:
+        - in: header
+          name: Idempotency-Key
+          required: true
+          schema:
+            type: string
+            minLength: 1
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              $ref: "#/components/schemas/AudioUploadRequest"
+      responses:
+        "202":
+          description: Audio job queued or replayed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/JobAccepted"
+        "400":
+          $ref: "#/components/responses/Error"
+        "413":
+          $ref: "#/components/responses/Error"
+        "415":
+          $ref: "#/components/responses/Error"
+        "422":
+          $ref: "#/components/responses/Error"
+        "409":
+          $ref: "#/components/responses/Error"
+  /api/v1/jobs/{job_id}:
+    get:
+      operationId: getJob
+      parameters:
+        - $ref: "#/components/parameters/JobId"
+      responses:
+        "200":
+          description: Job state, progress, result links, or failure
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/JobStatus"
+        "404":
+          $ref: "#/components/responses/Error"
+  /api/v1/jobs/{job_id}/files/{filename}:
+    get:
+      operationId: downloadJobFile
+      parameters:
+        - $ref: "#/components/parameters/JobId"
+        - in: path
+          name: filename
+          required: true
+          schema:
+            type: string
+            enum:
+              - timeline.json
+              - manifest.json
+              - video-qa.json
+              - captions.srt
+              - video_16_9.mp4
+              - video_9_16.mp4
+              - video_1_1.mp4
+      responses:
+        "200":
+          description: Generated artifact
+          content:
+            application/json:
+              schema:
+                type: object
+            application/x-subrip:
+              schema:
+                type: string
+            video/mp4:
+              schema:
+                type: string
+                format: binary
+        "404":
+          $ref: "#/components/responses/Error"
+components:
+  parameters:
+    JobId:
+      in: path
+      name: job_id
+      required: true
+      schema:
+        type: string
+        format: uuid
+  responses:
+    Error:
+      description: Error envelope
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+  schemas:
+    Health:
+      type: object
+      properties:
+        status:
+          const: ok
+        service:
+          type: string
+      required: [status, service]
+    Scene:
+      type: object
+      properties:
+        text:
+          type: string
+          minLength: 1
+          maxLength: 5000
+        visual_hint:
+          type: [string, "null"]
+          maxLength: 1000
+      required: [text]
+    Captions:
+      type: object
+      properties:
+        burn_in:
+          type: boolean
+          default: true
+        srt:
+          type: boolean
+          default: true
+    JobRequest:
+      type: object
+      properties:
+        audio_url:
+          type: [string, "null"]
+          format: uri
+          description: HTTPS URL on a host configured in AUDIO_URL_ALLOWED_HOSTS.
+        script:
+          type: [string, "null"]
+          maxLength: 30000
+        scenes:
+          type: [array, "null"]
+          maxItems: 100
+          items:
+            $ref: "#/components/schemas/Scene"
+        voice:
+          type: string
+          default: en-IN-female
+        language:
+          type: [string, "null"]
+          description: Optional Whisper language code; auto-detected when omitted.
+        aspect_ratios:
+          type: array
+          minItems: 1
+          items:
+            type: string
+            enum: ["16:9", "9:16", "1:1"]
+        style:
+          type: string
+        avoid:
+          type: array
+          items:
+            type: string
+        captions:
+          $ref: "#/components/schemas/Captions"
+      anyOf:
+        - required: [script]
+        - required: [scenes]
+        - required: [audio_url]
+    AudioUploadRequest:
+      type: object
+      properties:
+        audio_file:
+          type: string
+          format: binary
+        language:
+          type: string
+          description: Optional Whisper language code; auto-detected when omitted.
+        aspect_ratios:
+          type: array
+          items:
+            type: string
+            enum: ["16:9", "9:16", "1:1"]
+        style:
+          type: string
+        avoid:
+          type: array
+          items:
+            type: string
+        captions_burn_in:
+          type: boolean
+          default: true
+        captions_srt:
+          type: boolean
+          default: true
+      required: [audio_file]
+    JobAccepted:
+      type: object
+      properties:
+        job_id:
+          type: string
+          format: uuid
+        status:
+          type: string
+          enum: [queued, running, succeeded, failed]
+        progress:
+          type: integer
+          minimum: 0
+          maximum: 100
+        status_url:
+          type: string
+        idempotent_replay:
+          type: boolean
+      required: [job_id, status, progress, status_url]
+    JobStatus:
+      type: object
+      properties:
+        job_id:
+          type: string
+          format: uuid
+        status:
+          type: string
+          enum: [queued, running, succeeded, failed]
+        progress:
+          type: integer
+          minimum: 0
+          maximum: 100
+        result:
+          type: [object, "null"]
+        error:
+          type: [object, "null"]
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+      required: [job_id, status, progress, result, error, created_at, updated_at]
+    Error:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+              pattern: "^[A-Z][A-Z0-9_]*$"
+            message:
+              type: string
+            retryable:
+              type: boolean
+            details:
+              type: [object, array, string, "null"]
+          required: [code, message, retryable, details]
+      required: [error]

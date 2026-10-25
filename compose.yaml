@@ -1,0 +1,54 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      DATA_DIR: ${DATA_DIR:-/app/data}
+      OUTPUT_DIR: ${OUTPUT_DIR:-/app/data/outputs}
+      DB_PATH: ${DB_PATH:-/app/data/jobs.sqlite3}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      MAX_AUDIO_SECONDS: ${MAX_AUDIO_SECONDS:-600}
+      MAX_AUDIO_UPLOAD_BYTES: ${MAX_AUDIO_UPLOAD_BYTES:-104857600}
+      AUDIO_DOWNLOAD_TIMEOUT_SECONDS: ${AUDIO_DOWNLOAD_TIMEOUT_SECONDS:-30}
+      AUDIO_URL_ALLOWED_HOSTS: ${AUDIO_URL_ALLOWED_HOSTS:-}
+      MAX_SCRIPT_CHARACTERS: ${MAX_SCRIPT_CHARACTERS:-30000}
+      MAX_SCENES: ${MAX_SCENES:-100}
+      MEDIA_COMMAND_TIMEOUT_SECONDS: ${MEDIA_COMMAND_TIMEOUT_SECONDS:-300}
+      WHISPER_MODEL_SIZE: ${WHISPER_MODEL_SIZE:-base}
+      WHISPER_DEVICE: ${WHISPER_DEVICE:-cpu}
+      WHISPER_COMPUTE_TYPE: ${WHISPER_COMPUTE_TYPE:-int8}
+      WHISPER_MODEL_DIR: ${WHISPER_MODEL_DIR:-/app/data/whisper-models}
+      FFMPEG_BINARY: ${FFMPEG_BINARY:-ffmpeg}
+      FFPROBE_BINARY: ${FFPROBE_BINARY:-ffprobe}
+      ESPEAK_BINARY: ${ESPEAK_BINARY:-espeak-ng}
+      ESPEAK_VOICE: ${ESPEAK_VOICE:-en}
+      SAY_BINARY: ${SAY_BINARY:-say}
+      SAY_VOICE: ${SAY_VOICE:-}
+      FOOTAGE_PROVIDER: ${FOOTAGE_PROVIDER:-offline}
+      PEXELS_API_KEY: ${PEXELS_API_KEY:-}
+      PEXELS_USE_APPROVED: ${PEXELS_USE_APPROVED:-false}
+      OBJECT_STORE_ENDPOINT_URL: ${OBJECT_STORE_ENDPOINT_URL:-}
+      OBJECT_STORE_BUCKET: ${OBJECT_STORE_BUCKET:-incubrix-outputs}
+      OBJECT_STORE_ACCESS_KEY_ID: ${OBJECT_STORE_ACCESS_KEY_ID:-}
+      OBJECT_STORE_SECRET_ACCESS_KEY: ${OBJECT_STORE_SECRET_ACCESS_KEY:-}
+      OBJECT_STORE_REGION: ${OBJECT_STORE_REGION:-us-east-1}
+    volumes:
+      - app_data:/app/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/ready')"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+  test:
+    build: .
+    profiles: ["test"]
+    command: ["python", "-m", "pytest", "-q", "tests"]
+    environment:
+      OBJECT_STORE_ENDPOINT_URL: ${OBJECT_STORE_ENDPOINT_URL:-}
+      OBJECT_STORE_BUCKET: ${OBJECT_STORE_BUCKET:-incubrix-outputs}
+      OBJECT_STORE_ACCESS_KEY_ID: ${OBJECT_STORE_ACCESS_KEY_ID:-}
+      OBJECT_STORE_SECRET_ACCESS_KEY: ${OBJECT_STORE_SECRET_ACCESS_KEY:-}
+      OBJECT_STORE_REGION: ${OBJECT_STORE_REGION:-us-east-1}
+volumes:
+  app_data:

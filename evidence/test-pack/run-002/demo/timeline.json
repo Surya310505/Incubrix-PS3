@@ -1,0 +1,26 @@
+{
+  "job_id": "d8bfc5bf-3fa7-4733-a40c-12e0e07750c7",
+  "timing_source": "measured duration of separately synthesized narration segments",
+  "scenes": [
+    {
+      "scene_id": 1,
+      "narration_text": "A good plan turns goals into steady progress.",
+      "start": 0.0,
+      "end": 2.591,
+      "clip": "generated-scene-1",
+      "source": {
+        "type": "procedural-offline-visual",
+        "asset_id": "generated-scene-1",
+        "url": null,
+        "licence": "generated locally; no third-party media asset used",
+        "attribution": null,
+        "licence_evidence": "No external media source; generated abstract visuals."
+      },
+      "is_ai_generated": false,
+      "is_procedurally_generated": true,
+      "selection_reason": "Offline deterministic abstract visual; no licensed footage provider is configured.",
+      "relevance_score": null,
+      "visual_hint": null
+    }
+  ]
+}

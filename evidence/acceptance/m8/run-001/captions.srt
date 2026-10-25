@@ -1,0 +1,8 @@
+1
+00:00:00,000 --> 00:00:02,209
+A good plan starts with a clear goal.
+
+2
+00:00:02,209 --> 00:00:04,827
+Review progress and adjust the next step.
+

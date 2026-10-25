@@ -1,0 +1,46 @@
+{
+  "job_id": "817aae92-6f5e-4ce2-a969-f2ffd1991cc7",
+  "timing_source": "measured duration of separately synthesized narration segments",
+  "scenes": [
+    {
+      "scene_id": 1,
+      "narration_text": "Saving money starts with a plan.",
+      "start": 0.0,
+      "end": 1.83,
+      "clip": "generated-scene-1",
+      "source": {
+        "type": "procedural-offline-visual",
+        "asset_id": "generated-scene-1",
+        "url": null,
+        "licence": "generated locally; no third-party media asset used",
+        "attribution": null,
+        "licence_evidence": "No external media source; generated abstract visuals."
+      },
+      "is_ai_generated": false,
+      "is_procedurally_generated": true,
+      "selection_reason": "Offline deterministic abstract visual; no licensed footage provider is configured.",
+      "relevance_score": null,
+      "visual_hint": null
+    },
+    {
+      "scene_id": 2,
+      "narration_text": "Track every expense.",
+      "start": 1.83,
+      "end": 3.233,
+      "clip": "generated-scene-2",
+      "source": {
+        "type": "procedural-offline-visual",
+        "asset_id": "generated-scene-2",
+        "url": null,
+        "licence": "generated locally; no third-party media asset used",
+        "attribution": null,
+        "licence_evidence": "No external media source; generated abstract visuals."
+      },
+      "is_ai_generated": false,
+      "is_procedurally_generated": true,
+      "selection_reason": "Offline deterministic abstract visual; no licensed footage provider is configured.",
+      "relevance_score": null,
+      "visual_hint": null
+    }
+  ]
+}

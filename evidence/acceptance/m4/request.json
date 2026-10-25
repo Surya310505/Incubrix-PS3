@@ -1,0 +1,14 @@
+{
+  "script": "Solar panels turn daylight into electricity. A home battery stores that clean power for evening use.",
+  "aspect_ratios": [
+    "16:9",
+    "9:16",
+    "1:1"
+  ],
+  "style": "original illustrated graphics",
+  "avoid": [],
+  "captions": {
+    "burn_in": true,
+    "srt": true
+  }
+}

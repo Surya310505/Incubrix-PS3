@@ -1,0 +1,55 @@
+{
+  "job_id": "7d75491d-4729-4aa9-8905-55fb5c0320a9",
+  "models": [],
+  "providers": [
+    {
+      "name": "macOS-say",
+      "version": "system-managed; exact version not queried",
+      "voice": "platform-default"
+    },
+    {
+      "name": "FFmpeg",
+      "version": "ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers"
+    },
+    {
+      "name": "FFprobe",
+      "version": "ffprobe version 8.1 Copyright (c) 2007-2026 the FFmpeg developers"
+    },
+    {
+      "name": "Pillow",
+      "version": "12.3.0"
+    }
+  ],
+  "settings": {
+    "voice": null,
+    "input_mode": "script",
+    "language": null,
+    "input_audio_duration_seconds": null,
+    "aspect_ratios": [
+      "16:9"
+    ],
+    "style": "illustrated clean-energy graphics",
+    "avoid": [],
+    "captions": {
+      "burn_in": true,
+      "srt": true
+    }
+  },
+  "seed": null,
+  "timings_ms": {
+    "total": 56591.97
+  },
+  "cost_estimate": {
+    "amount": null,
+    "currency": "USD",
+    "basis": "local compute cost not measured; no external services invoked"
+  },
+  "warnings": [
+    "The request voice field is metadata; select the local speech voice with environment configuration.",
+    "Original locally generated illustrations were used where footage was unavailable; they are not stock B-roll and commercial suitability has not been assessed."
+  ],
+  "attribution_notice": null,
+  "licence_rights": {
+    "status": "no third-party footage used; generated illustrations are not stock B-roll and commercial suitability has not been assessed"
+  }
+}

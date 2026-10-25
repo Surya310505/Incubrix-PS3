@@ -1,0 +1,52 @@
+{
+  "job_id": "86356c1f-f028-4751-b720-bbacd0a0f15d",
+  "timing_source": "measured duration of separately synthesized narration segments",
+  "scenes": [
+    {
+      "scene_id": 1,
+      "narration_text": "A good plan starts with a clear goal.",
+      "start": 0.0,
+      "end": 2.209,
+      "clip": "generated-scene-1",
+      "source": {
+        "type": "procedural-offline-visual",
+        "asset_id": "generated-scene-1",
+        "url": null,
+        "licence": "not applicable; generated graphic, not stock footage",
+        "licence_reference": null,
+        "creator": null,
+        "attribution": null,
+        "licence_evidence": "Original graphic rendered locally; this is not evidence of commercial B-roll rights."
+      },
+      "is_ai_generated": false,
+      "is_procedurally_generated": true,
+      "selection_reason": "Original locally generated story illustration; not stock footage.",
+      "relevance_score": null,
+      "title_keyword_overlap": null,
+      "visual_hint": null
+    },
+    {
+      "scene_id": 2,
+      "narration_text": "Review progress and adjust the next step.",
+      "start": 2.209,
+      "end": 4.827,
+      "clip": "generated-scene-2",
+      "source": {
+        "type": "procedural-offline-visual",
+        "asset_id": "generated-scene-2",
+        "url": null,
+        "licence": "not applicable; generated graphic, not stock footage",
+        "licence_reference": null,
+        "creator": null,
+        "attribution": null,
+        "licence_evidence": "Original graphic rendered locally; this is not evidence of commercial B-roll rights."
+      },
+      "is_ai_generated": false,
+      "is_procedurally_generated": true,
+      "selection_reason": "Original locally generated story illustration; not stock footage.",
+      "relevance_score": null,
+      "title_keyword_overlap": null,
+      "visual_hint": null
+    }
+  ]
+}

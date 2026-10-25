@@ -1,0 +1,23 @@
+{
+  "started_at_utc": "2026-10-25T15:34:33.598723+00:00",
+  "completed_at_utc": "2026-10-25T15:34:50.388041+00:00",
+  "command": "FOOTAGE_PROVIDER=offline python -c 'render_script_job from evidence/acceptance/m4/request.json'",
+  "git_commit": null,
+  "revision_note": "Workspace is not a Git repository; source SHA-256 fingerprints are recorded instead.",
+  "source_fingerprint_sha256": {
+    "app/pipeline.py": "735684253c7ef4dddfe9e95f0ae3d76bf0a4870c2fbc791d17f004f577985e4b",
+    "app/audio.py": "40504a42d46d024a6bb1a09d43455aaf3cec928f9e4df28faa5f9c8df8e51ac8",
+    "requirements.txt": "b9606ce01fdf7af1b9e6bc3db9d5ee97c552f2af88b3e99da45e7f36ef941213"
+  },
+  "python_version": "3.13.2",
+  "ffmpeg_version": "ffmpeg version 8.1 Copyright (c) 2000-2026 the FFmpeg developers",
+  "ffprobe_version": "ffprobe version 8.1 Copyright (c) 2007-2026 the FFmpeg developers",
+  "result": "succeeded",
+  "duration_seconds": 5.554,
+  "video_qa_status": "passed",
+  "outputs": [
+    "video_16_9.mp4",
+    "video_1_1.mp4",
+    "video_9_16.mp4"
+  ]
+}

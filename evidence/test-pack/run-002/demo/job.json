@@ -1,0 +1,18 @@
+{
+  "job_id": "d8bfc5bf-3fa7-4733-a40c-12e0e07750c7",
+  "status": "succeeded",
+  "progress": 100,
+  "result": {
+    "status": "succeeded",
+    "files": {
+      "video_16_9.mp4": "/api/v1/jobs/d8bfc5bf-3fa7-4733-a40c-12e0e07750c7/files/video_16_9.mp4",
+      "timeline.json": "/api/v1/jobs/d8bfc5bf-3fa7-4733-a40c-12e0e07750c7/files/timeline.json",
+      "captions.srt": "/api/v1/jobs/d8bfc5bf-3fa7-4733-a40c-12e0e07750c7/files/captions.srt",
+      "manifest.json": "/api/v1/jobs/d8bfc5bf-3fa7-4733-a40c-12e0e07750c7/files/manifest.json"
+    },
+    "duration_seconds": 2.591
+  },
+  "error": null,
+  "created_at": "2026-10-21T16:48:46.982563+00:00",
+  "updated_at": "2026-10-21T16:48:50.945461+00:00"
+}

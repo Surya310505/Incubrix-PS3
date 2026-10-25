@@ -1,0 +1,10 @@
+{
+  "script": "A good plan turns goals into steady progress.",
+  "aspect_ratios": ["16:9"],
+  "style": "abstract motion graphics",
+  "avoid": [],
+  "captions": {
+    "burn_in": true,
+    "srt": true
+  }
+}

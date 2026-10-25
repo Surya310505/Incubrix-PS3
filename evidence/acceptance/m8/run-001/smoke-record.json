@@ -1,0 +1,25 @@
+{
+  "recorded_at_utc": "2026-10-25T15:05:22.975468+00:00",
+  "execution": "local Docker Compose API container",
+  "host_port": 18000,
+  "health_status": {
+    "status": "ok",
+    "service": "incubrix-ps3"
+  },
+  "readiness_status": {
+    "status": "ready"
+  },
+  "job_status": "succeeded",
+  "job_id": "86356c1f-f028-4751-b720-bbacd0a0f15d",
+  "files_downloaded": [
+    "captions.srt",
+    "manifest.json",
+    "timeline.json",
+    "video-qa.json",
+    "video_16_9.mp4"
+  ],
+  "video_qa_status": "passed",
+  "limitations": [
+    "Local container only; no public deployment or review-period uptime verified."
+  ]
+}

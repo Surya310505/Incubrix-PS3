@@ -1,0 +1,11 @@
+{
+  "script": "A good plan starts with a clear goal. Review progress and adjust the next step.",
+  "aspect_ratios": [
+    "16:9"
+  ],
+  "style": "original illustrated graphics",
+  "captions": {
+    "burn_in": true,
+    "srt": true
+  }
+}

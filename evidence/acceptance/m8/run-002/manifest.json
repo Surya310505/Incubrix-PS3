@@ -1,0 +1,84 @@
+{
+  "job_id": "700ad964-bee5-487b-b35f-c38b5dd760eb",
+  "models": [],
+  "providers": [
+    {
+      "name": "espeak-ng",
+      "version": "system-managed; exact version not queried",
+      "voice": "en"
+    },
+    {
+      "name": "FFmpeg",
+      "version": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers"
+    },
+    {
+      "name": "FFprobe",
+      "version": "ffprobe version 7.1.5-0+deb13u1 Copyright (c) 2007-2026 the FFmpeg developers"
+    },
+    {
+      "name": "Pillow",
+      "version": "12.3.0"
+    }
+  ],
+  "settings": {
+    "voice": "en-IN-female",
+    "input_mode": "script",
+    "language": null,
+    "input_audio_duration_seconds": null,
+    "aspect_ratios": [
+      "16:9"
+    ],
+    "style": "original illustrated graphics",
+    "avoid": [],
+    "captions": {
+      "burn_in": true,
+      "srt": true
+    }
+  },
+  "seed": null,
+  "timings_ms": {
+    "total": 9124.8
+  },
+  "video_quality": {
+    "status": "passed",
+    "report_file": "video-qa.json",
+    "outputs": {
+      "video_16_9.mp4": {
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "video": {
+          "codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "frame_rate": "30/1",
+          "pixel_format": "yuv420p",
+          "time_base": "1/15360",
+          "start_time_seconds": 0.0,
+          "duration_seconds": 4.8
+        },
+        "audio": {
+          "codec": "aac",
+          "sample_rate": "48000",
+          "start_time_seconds": 0.0,
+          "duration_seconds": 4.827
+        },
+        "audio_video_start_drift_seconds": 0.0,
+        "audio_video_duration_drift_seconds": 0.027000000000000135,
+        "black_intervals": [],
+        "frozen_intervals": []
+      }
+    }
+  },
+  "cost_estimate": {
+    "amount": null,
+    "currency": "USD",
+    "basis": "local compute cost not measured; no external services invoked"
+  },
+  "warnings": [
+    "The request voice field is metadata; select the local speech voice with environment configuration.",
+    "Original locally generated illustrations were used where footage was unavailable; they are not stock B-roll and commercial suitability has not been assessed."
+  ],
+  "attribution_notice": null,
+  "licence_rights": {
+    "status": "no third-party footage used; generated illustrations are not stock B-roll and commercial suitability has not been assessed"
+  }
+}

@@ -1,0 +1,4 @@
+1
+00:00:00,000 --> 00:00:02,591
+A good plan turns goals into steady progress.
+
